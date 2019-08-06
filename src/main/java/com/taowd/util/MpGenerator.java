@@ -79,18 +79,18 @@ public class MpGenerator {
 		dsc.setUsername("root");
 		dsc.setPassword("root");
 		dsc.setUrl(
-				"jdbc:mysql://127.0.0.1:3306/ajr_db?serverTimezone=UTC&characterEncoding=utf8&useUnicode=true&useSSL=false");
+				"jdbc:mysql://127.0.0.1:3306/test?serverTimezone=UTC&characterEncoding=utf8&useUnicode=true&useSSL=false");
 		mpg.setDataSource(dsc);
 
 		// 策略配置
 		StrategyConfig strategy = new StrategyConfig();
 		// strategy.setCapitalMode(true);// 全局大写命名 ORACLE 注意
 		// 此处可以修改为您的表前缀
-		strategy.setTablePrefix(new String[] { "ajr_", "" });
+		strategy.setTablePrefix(new String[] { "pms_", "" });
 		// 表名生成策略
 		strategy.setNaming(NamingStrategy.underline_to_camel);
 		// 需要生成的表
-		strategy.setInclude(new String[] { "ajr_users" });
+		strategy.setInclude(new String[] { "pms_user" });
 		// 排除生成的表
 		// strategy.setExclude(new String[]{"test"});
 		// 自定义实体父类
@@ -115,7 +115,7 @@ public class MpGenerator {
 
 		// 包配置
 		PackageConfig pc = new PackageConfig();
-		pc.setParent("com.taowd");
+		pc.setParent("com.taowd.module");
 		// pc.setModuleName("entity");
 		mpg.setPackageInfo(pc);
 

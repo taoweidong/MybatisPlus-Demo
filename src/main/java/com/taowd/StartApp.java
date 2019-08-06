@@ -8,7 +8,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  * @author Taoweidong
  */
 @SpringBootApplication
-@MapperScan("com.taowd.mybatisplus.mapper")
+@MapperScan("com.taowd.module.mapper")
 public class StartApp {
 
 	public static void main(String[] args) {
