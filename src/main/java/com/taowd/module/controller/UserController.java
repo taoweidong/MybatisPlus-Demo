@@ -1,16 +1,17 @@
 package com.taowd.module.controller;
 
-import com.github.javafaker.Faker;
-import com.taowd.base.RestResponseBo;
-import com.taowd.module.entity.User;
+import java.util.List;
+import java.util.Locale;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
-import com.taowd.module.service.IUserService;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.List;
-import java.util.Locale;
+import com.github.javafaker.Faker;
+import com.taowd.base.RestResponseBo;
+import com.taowd.module.entity.User;
+import com.taowd.module.service.IUserService;
 
 /**
  * 前端控制器

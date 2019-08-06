@@ -8,71 +8,73 @@ import java.io.Serializable;
 
 /**
  * <p>
- * 
  * </p>
- *
  * @author Taoweidong
  * @since 2019-08-06
  */
 @TableName("pms_user")
 public class User extends Model<User> {
 
-    private static final long serialVersionUID = 1L;
+	private static final long serialVersionUID = 1L;
 
-    @TableId(value = "id", type = IdType.AUTO)
-    private String id;
+	@TableId(value = "id", type = IdType.AUTO)
+	private String id;
 
-    private String name;
+	private String name;
 
-    private String sex;
+	private String sex;
 
-    private Integer age;
+	private Integer age;
 
+	public String getId() {
 
-    public String getId() {
-        return id;
-    }
+		return id;
+	}
 
-    public void setId(String id) {
-        this.id = id;
-    }
+	public void setId(String id) {
 
-    public String getName() {
-        return name;
-    }
+		this.id = id;
+	}
 
-    public void setName(String name) {
-        this.name = name;
-    }
+	public String getName() {
 
-    public String getSex() {
-        return sex;
-    }
+		return name;
+	}
 
-    public void setSex(String sex) {
-        this.sex = sex;
-    }
+	public void setName(String name) {
 
-    public Integer getAge() {
-        return age;
-    }
+		this.name = name;
+	}
 
-    public void setAge(Integer age) {
-        this.age = age;
-    }
+	public String getSex() {
 
-    @Override
-    protected Serializable pkVal() {
-        return this.id;
-    }
+		return sex;
+	}
 
-    @Override
-    public String toString() {
-        return "User{" +
-        "id=" + id +
-        ", name=" + name +
-        ", sex=" + sex +
-        ", age=" + age +
-        "}";
-    }
+	public void setSex(String sex) {
+
+		this.sex = sex;
+	}
+
+	public Integer getAge() {
+
+		return age;
+	}
+
+	public void setAge(Integer age) {
+
+		this.age = age;
+	}
+
+	@Override
+	protected Serializable pkVal() {
+
+		return this.id;
+	}
+
+	@Override
+	public String toString() {
+
+		return "User{" + "id=" + id + ", name=" + name + ", sex=" + sex + ", age=" + age + "}";
+	}
 }
