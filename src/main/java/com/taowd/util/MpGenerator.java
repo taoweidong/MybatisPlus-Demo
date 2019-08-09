@@ -46,7 +46,7 @@ public class MpGenerator {
 		// .setKotlin(true) 是否生成 kotlin 代码
 		gc.setAuthor("Taoweidong");
 		// 主键策略
-		gc.setIdType(IdType.AUTO);
+		gc.setIdType(IdType.UUID);
 		// 生成基本的SQL片段
 		gc.setBaseColumnList(true);
 		// 自定义文件命名，注意 %s 会自动填充表实体属性！
